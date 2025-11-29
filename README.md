@@ -42,10 +42,20 @@ color controlado, tipografía consistente y secciones organizadas.
 </p>
 Incluye métricas clave:
 - Total de piezas procesadas: Hace referencia a la cantidad de muestras tomadas para el análisis.
+
 - Fallas registradas: total de fallas que se presentaron en 10k de datos.
+  
 - Tipos de falla: Fallas registradas por el operador.
+
 - Fallas por producto: Fallas en las lineas de produccion de los tres tipos de productos.
+
 - Condiciones operativas durante fallos: Torque y RPMs que se presentaron durante la falla registrada.
 
 Este proyecto muestra un flujo completo: datos industriales → PostgreSQL en Docker → modelado SQL → Power BI.
-Aunque usa datos sintéticos, reproduce un escenario real de análisis industrial y puede escalarse fácilmente a datos IoT o mantenimiento predictivo en producción.
+Aunque usa datos sintéticos, reproduce un escenario real de análisis industrial y puede escalarse fácilmente a datos IoT o mantenimiento predictivo en producción. Para concluir, analizaremos los aspectos más importantes de los fallos en la línea de producción de productos de baja calidad, enfocándonos en una pantalla específica que registra estos incidentes.
+<p align="center">
+  <img src="assets/Low_Quality_P_Failure.png" alt="Diagrama del entorno" width="700"/>
+</p>
+La línea de productos de baja calidad presenta la mayor cantidad de fallos, con 235 incidencias (2.35% del lote de 10000 productos). Los fallos más frecuentes son por disipación de calor y sobreesfuerzo.
+
+Es crucial un enfoque de mantenimiento sistemático. Esto implica un análisis exhaustivo de las fallas para identificar las causas raíz, seguido de la mejora del mantenimiento preventivo mediante inspecciones más frecuentes, limpieza regular, reemplazo programado de componentes, monitoreo de condición y análisis de causa raíz. También es esencial capacitar al personal en operación, mantenimiento preventivo e identificación de señales de advertencia.
