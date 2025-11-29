@@ -3,17 +3,19 @@ An end-to-end industrial analytics project integrating IoT-style data, Dockerize
 
 🏭Este proyecto simula un flujo típico de datos industriales:
 sensores IoT → base de datos PostgreSQL en Docker → modelado SQL → Power BI Desktop → dashboard analítico de fallas.
-📦 1. Dataset utilizado
+
+##📦 1. Dataset utilizado
+Para este proyecto utilicé el dataset Machine Predictive Maintenance Classification de Kaggle. Contiene 10.000 registros sintéticos con variables típicas de maquinaria industrial: temperatura, torque, RPM, desgaste de herramienta y diferentes tipos de fallas.
+Este conjunto de datos es ideal para practicar análisis de confiabilidad y mantenimiento predictivo. A partir de él construí todo el flujo de trabajo.
 
 Dataset original:
 Machine Predictive Maintenance Classification
 Fuente: https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification/data
 
-Este dataset contiene 10,000 registros sintéticos generados con fines de modelado y análisis para sistemas de mantenimiento predictivo. Cada fila representa una pieza procesada por maquinaria industrial bajo diversas condiciones operativas
-Estos datos, aunque sintéticos, simulan señales típicas de instrumentación industrial (IIoT) donde cada medición permite analizar patrones operativos y comportamientos de falla.
-
-🐳 2. Entorno Docker + PostgreSQL
-Para almacenar, consultar y modelar los datos utilicé Docker Desktop ejecutando un contenedor con:
+##🐳 2. Entorno Docker + PostgreSQL
+Monté un entorno local usando Docker Desktop con PostgreSQL 16.
+Desde pgAdmin creé la base de datos, el esquema, las tablas y cargué el CSV del dataset.
+Este entorno simula cómo se gestionaría información industrial en un sistema real y permite consultas desde herramientas externas.
 
 - PostgreSQL 16
 - Acceso local desde localhost:5432
@@ -23,11 +25,27 @@ Para almacenar, consultar y modelar los datos utilicé Docker Desktop ejecutando
   <img src="assets/Network_diagram.png" alt="Diagrama del entorno" width="400"/>
 </p>
 
-Acciones realizadas en PostgreSQL:
-- Creación de la base de datos: Machine Dataset
-- Generación del schema: maintenance
-- Definición de columnas basadas en la estructura del CSV
-- Importación de datos vía pgAdmin (Import/Export Data)
-- Limpieza ligera de columnas (tipos, formatos, claves)
+Una vez construido el backend de almacenamiento, la siguiente fase consistió en conectar la base de datos con una herramienta de análisis que permitiera extraer insights de valor.
 
-Este entorno reproduce cómo operaríamos una base industrial real alojada localmente o en una planta.
+##📊 3. Power BI – Transformación y modelado – High Performance Layout
+Con la base conectada a Power BI, utilicé Power Query para limpiar datos, corregir tipos y crear columnas más legibles.
+Luego, con DAX, generé medidas como:
+
+- Total de fallas
+- Failure Rate
+- Fallas por tipo de producto
+- Torque y RPM promedio en fallas
+Esta fase permitió convertir un dataset técnico y numérico en información interpretable, abriendo paso al diseño final del dashboard. El dashboard fue diseñado siguiendo principios de visualización clara:
+color controlado, tipografía consistente y secciones organizadas.
+<p align="center">
+  <img src="assets/Big_LookUp.png" alt="Diagrama del entorno" width="400"/>
+</p>
+Incluye métricas clave:
+- Total de piezas procesadas: Hace referencia a la cantidad de muestras tomadas para el análisis.
+- Fallas registradas: total de fallas que se presentaron en 10k de datos.
+- Tipos de falla: Fallas registradas por el operador.
+- Fallas por producto: Fallas en las lineas de produccion de los tres tipos de productos.
+- Condiciones operativas durante fallos: Torque y RPMs que se presentaron durante la falla registrada.
+
+Este proyecto muestra un flujo completo: datos industriales → PostgreSQL en Docker → modelado SQL → Power BI.
+Aunque usa datos sintéticos, reproduce un escenario real de análisis industrial y puede escalarse fácilmente a datos IoT o mantenimiento predictivo en producción.
