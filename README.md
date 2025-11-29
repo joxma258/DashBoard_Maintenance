@@ -4,7 +4,7 @@ An end-to-end industrial analytics project integrating IoT-style data, Dockerize
 🏭Este proyecto simula un flujo típico de datos industriales:
 sensores IoT → base de datos PostgreSQL en Docker → modelado SQL → Power BI Desktop → dashboard analítico de fallas.
 
-##📦 1. Dataset utilizado
+## 📦 1. Dataset utilizado
 Para este proyecto utilicé el dataset Machine Predictive Maintenance Classification de Kaggle. Contiene 10.000 registros sintéticos con variables típicas de maquinaria industrial: temperatura, torque, RPM, desgaste de herramienta y diferentes tipos de fallas.
 Este conjunto de datos es ideal para practicar análisis de confiabilidad y mantenimiento predictivo. A partir de él construí todo el flujo de trabajo.
 
@@ -12,7 +12,7 @@ Dataset original:
 Machine Predictive Maintenance Classification
 Fuente: https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification/data
 
-##🐳 2. Entorno Docker + PostgreSQL
+## 🐳 2. Entorno Docker + PostgreSQL
 Monté un entorno local usando Docker Desktop con PostgreSQL 16.
 Desde pgAdmin creé la base de datos, el esquema, las tablas y cargué el CSV del dataset.
 Este entorno simula cómo se gestionaría información industrial en un sistema real y permite consultas desde herramientas externas.
@@ -27,7 +27,7 @@ Este entorno simula cómo se gestionaría información industrial en un sistema 
 
 Una vez construido el backend de almacenamiento, la siguiente fase consistió en conectar la base de datos con una herramienta de análisis que permitiera extraer insights de valor.
 
-##📊 3. Power BI – Transformación y modelado – High Performance Layout
+## 📊 3. Power BI – Transformación y modelado – High Performance Layout
 Con la base conectada a Power BI, utilicé Power Query para limpiar datos, corregir tipos y crear columnas más legibles.
 Luego, con DAX, generé medidas como:
 
@@ -54,7 +54,7 @@ Incluye métricas clave:
 Este proyecto muestra un flujo completo: datos industriales → PostgreSQL en Docker → modelado SQL → Power BI.
 Aunque usa datos sintéticos, reproduce un escenario real de análisis industrial y puede escalarse fácilmente a datos IoT o mantenimiento predictivo en producción.
 
-##Caso de Estudio 🤓☝️
+## Caso de Estudio 🤓☝️
 
 Para concluir, analizaremos los aspectos más importantes de los fallos en la línea de producción de productos de baja calidad, enfocándonos en una pantalla específica que registra estos incidentes.
 <p align="center">
