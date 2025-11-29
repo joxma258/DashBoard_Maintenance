@@ -20,6 +20,6 @@ Para almacenar, consultar y modelar los datos utilicé Docker Desktop ejecutando
 - Gestión vía pgAdmin 4
 
 <p align="center">
-  <img src="Network_diagram.png" alt="Diagrama del entorno" width="400"/>
+  <img src="assets/Network_diagram.png" alt="Diagrama del entorno" width="400"/>
 </p>
 
