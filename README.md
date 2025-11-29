@@ -15,9 +15,13 @@ Estos datos, aunque sintéticos, simulan señales típicas de instrumentación i
 🐳 2. Entorno Docker + PostgreSQL
 Para almacenar, consultar y modelar los datos utilicé Docker Desktop ejecutando un contenedor con:
 
--PostgreSQL 16
--Acceso local desde localhost:5432
--Gestión vía pgAdmin 4
+- PostgreSQL 16
+- Acceso local desde localhost:5432
+- Gestión vía pgAdmin 4
+
+<p align="center">
+  <img src="Network_diagram.png" alt="Diagrama del entorno" width="400"/>
+</p>
 
 ![Entorno](Network_diagram.png)
 
