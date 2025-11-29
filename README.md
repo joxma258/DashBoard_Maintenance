@@ -23,3 +23,11 @@ Para almacenar, consultar y modelar los datos utilicé Docker Desktop ejecutando
   <img src="assets/Network_diagram.png" alt="Diagrama del entorno" width="400"/>
 </p>
 
+Acciones realizadas en PostgreSQL:
+- Creación de la base de datos: Machine Dataset
+- Generación del schema: maintenance
+- Definición de columnas basadas en la estructura del CSV
+- Importación de datos vía pgAdmin (Import/Export Data)
+- Limpieza ligera de columnas (tipos, formatos, claves)
+
+Este entorno reproduce cómo operaríamos una base industrial real alojada localmente o en una planta.
