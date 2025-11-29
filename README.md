@@ -38,7 +38,7 @@ Luego, con DAX, generé medidas como:
 Esta fase permitió convertir un dataset técnico y numérico en información interpretable, abriendo paso al diseño final del dashboard. El dashboard fue diseñado siguiendo principios de visualización clara:
 color controlado, tipografía consistente y secciones organizadas.
 <p align="center">
-  <img src="assets/Big_LookUp.png" alt="Diagrama del entorno" width="400"/>
+  <img src="assets/Big_LookUp.png" alt="Diagrama del entorno" width="700"/>
 </p>
 Incluye métricas clave:
 - Total de piezas procesadas: Hace referencia a la cantidad de muestras tomadas para el análisis.
