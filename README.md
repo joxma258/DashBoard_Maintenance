@@ -23,5 +23,3 @@ Para almacenar, consultar y modelar los datos utilicé Docker Desktop ejecutando
   <img src="Network_diagram.png" alt="Diagrama del entorno" width="400"/>
 </p>
 
-![Entorno](Network_diagram.png)
-
