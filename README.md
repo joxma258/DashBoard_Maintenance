@@ -52,8 +52,10 @@ Incluye métricas clave:
 - Condiciones operativas durante fallos: Torque y RPMs que se presentaron durante la falla registrada.
 
 Este proyecto muestra un flujo completo: datos industriales → PostgreSQL en Docker → modelado SQL → Power BI.
-Aunque usa datos sintéticos, reproduce un escenario real de análisis industrial y puede escalarse fácilmente a datos IoT o mantenimiento predictivo en producción. 
+Aunque usa datos sintéticos, reproduce un escenario real de análisis industrial y puede escalarse fácilmente a datos IoT o mantenimiento predictivo en producción.
+
 ##Caso de Estudio 🤓☝️
+
 Para concluir, analizaremos los aspectos más importantes de los fallos en la línea de producción de productos de baja calidad, enfocándonos en una pantalla específica que registra estos incidentes.
 <p align="center">
   <img src="assets/Low_Quality_P_Failure.png" alt="Diagrama del entorno" width="700"/>
