@@ -18,5 +18,6 @@ Para almacenar, consultar y modelar los datos utilicé Docker Desktop ejecutando
 -PostgreSQL 16
 -Acceso local desde localhost:5432
 -Gestión vía pgAdmin 4
-![Entorno](Network diagram example - Page 1.png)
+
+![Entorno](Network_diagram.png)
 
